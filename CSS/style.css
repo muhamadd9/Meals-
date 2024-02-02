@@ -1,0 +1,145 @@
+
+/* Loader */
+
+.loading{
+    position: fixed;
+    inset: 0;
+    display: none;
+    /* opacity: 0; */
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color:#de3500 #0000 #fff #0000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: 1s rotate linear infinite;
+ }
+ .loader:before , .loader:after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color:#fff;
+    transform: translate(-10px, 19px) rotate(-35deg);
+  }
+ .loader:after {
+    border-color: #de3500 #0000 #0000 #0000 ;
+    transform: translate(32px, 3px) rotate(-35deg);
+  }
+   @keyframes rotate {
+    100%{    transform: rotate(360deg)}
+  }
+
+
+  /* side nav */
+
+  .side-nav{
+    background-color: red;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    transition: 0.8s;
+    z-index: 10;
+  }
+  .side-nav-inner{
+    background-color: black;
+  }
+  .side-nav-inner .navs li {
+    transition: 0.5s;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+  }
+  .side-nav-inner i{
+    color: white;
+  }
+  .side-nav-icon{
+    background-color: white;
+
+  }
+
+  /*    */
+
+  .overlay{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.732);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 100%;
+    transition: top 0.6s;
+    /* opacity: 0.8; */
+    display: flex;
+    align-items: center;
+  }
+
+  .column:hover .overlay{
+    top: 0;
+  }
+
+  /* search */
+
+  .row.search{
+    display:none ;  
+  }
+
+  .row.search input::placeholder{
+    color: gray;
+  }
+  .row.search input{
+    color: white;
+  }
+
+/* Categories */
+
+.row.categories{
+  display: none;
+}
+.row.categories .overlay{
+  display: block;
+  text-align: center;
+}
+
+/* Category Meals */
+
+.row.categorie-meals{
+  display: none;
+}
+
+/* each meal dateils */
+
+.row.meal-details{
+  display: none;
+}
+.close-icon{
+  left: 100%;
+  width: fit-content;
+  
+}
+
+.close-icon i{
+  transition: 0.4s;
+  color: gray;
+}
+.close-icon i:hover{
+  color: white;
+}
+
+/* area */
+
+.row.areas{
+  display: none;
+}
+.row.contact{
+  display: none;
+}
